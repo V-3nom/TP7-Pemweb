@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal2_Kotak-Warna</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        
+        #kotakWarna {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #333;
+            margin: 20px auto;
+            background-color: #fff;
+        }
+        
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        
+        #tombolMerah {
+            background-color: #ff6b6b;
+            color: white;
+        }
+        
+        #tombolBiru {
+            background-color: #4834d4;
+            color: white;
+        }
+        
+        #tombolKuning {
+            background-color: #ffd32a;
+            color: black;
+        }
+    </style>
+    <!-- Import jQuery dari CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Bermain dengan Warna</h1>
+    <div>
+        <button id="tombolMerah">Merah</button>
+        <button id="tombolBiru">Biru</button>
+        <button id="tombolKuning">Kuning</button>
+    </div>
+    <div id="kotakWarna"></div>
+    <div>
+        <button id="sembunyikanKotak">Sembunyikan Kotak</button>
+        <button id="tampilkanKotak">Tampilkan Kotak</button>
+    </div>
+    <p>Klik tombol warna untuk mengubah warna kotak.</p>
+    <p>Gunakan tombol Sembunyikan dan Tampilkan untuk menyembunyikan dan menampilkan kotak.</p>
+
+    <script>
+        $(document).ready(function() {
+            // Fungsi untuk mengubah warna kotak
+            $('#tombolMerah').click(function() {
+                $('#kotakWarna').css('background-color', 'red');
+            });
+            
+            $('#tombolBiru').click(function() {
+                $('#kotakWarna').css('background-color', 'blue');
+            });
+            
+            $('#tombolKuning').click(function() {
+                $('#kotakWarna').css('background-color', 'yellow');
+            });
+            
+            // Fungsi untuk menyembunyikan dan menampilkan kotak
+            $('#sembunyikanKotak').click(function() {
+                $('#kotakWarna').hide();
+            });
+            
+            $('#tampilkanKotak').click(function() {
+                $('#kotakWarna').show();
+            });
+        });
+    </script>
+</body>
+</html>
